@@ -1,0 +1,84 @@
+PODS:
+  - Alamofire (5.6.2)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
+  - BranchSDK (2.1.1)
+  - CBPinEntryView (1.7.1)
+  - CountryPickerView (3.3.0)
+  - FSCalendar (2.8.4)
+  - GoogleMaps (6.2.1):
+    - GoogleMaps/Maps (= 6.2.1)
+  - GoogleMaps/Base (6.2.1)
+  - GoogleMaps/Maps (6.2.1):
+    - GoogleMaps/Base
+  - GooglePlaces (6.2.1)
+  - IQKeyboardManagerSwift (6.5.10)
+  - OneSignalXCFramework (3.12.4):
+    - OneSignalXCFramework/OneSignalCore (= 3.12.4)
+    - OneSignalXCFramework/OneSignalExtension (= 3.12.4)
+    - OneSignalXCFramework/OneSignalOutcomes (= 3.12.4)
+  - OneSignalXCFramework/OneSignalCore (3.12.4)
+  - OneSignalXCFramework/OneSignalExtension (3.12.4):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalOutcomes
+  - OneSignalXCFramework/OneSignalOutcomes (3.12.4):
+    - OneSignalXCFramework/OneSignalCore
+  - SDWebImage (5.13.4):
+    - SDWebImage/Core (= 5.13.4)
+  - SDWebImage/Core (5.13.4)
+  - SVProgressHUD (2.2.5)
+  - TikTokOpenSDK (5.0.15)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - BranchSDK
+  - CBPinEntryView
+  - CountryPickerView
+  - FSCalendar
+  - GoogleMaps
+  - GooglePlaces
+  - IQKeyboardManagerSwift
+  - OneSignalXCFramework (< 4.0, >= 3.0.0)
+  - SDWebImage
+  - SVProgressHUD
+  - TikTokOpenSDK (~> 5.0.14)
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - BranchSDK
+    - CBPinEntryView
+    - CountryPickerView
+    - FSCalendar
+    - GoogleMaps
+    - GooglePlaces
+    - IQKeyboardManagerSwift
+    - OneSignalXCFramework
+    - SDWebImage
+    - SVProgressHUD
+    - TikTokOpenSDK
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  BranchSDK: 8f1b88ec55c969ce3a1dc735d51eec723bd99d3b
+  CBPinEntryView: 5a91ba422bd8a38eea587511c92c89b19be78454
+  CountryPickerView: 6322ada32a80b0cd721b0267282a5c24f406f263
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  GoogleMaps: 20d7b12be49a14287f797e88e0e31bc4156aaeb4
+  GooglePlaces: 94974aa119573d5acc2a35a699948dac838abd73
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  OneSignalXCFramework: 087934ab0d4d7445fcf1c015c7c782359e26c020
+  SDWebImage: e5cc87bf736e60f49592f307bdf9e157189298a3
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TikTokOpenSDK: dc1199ba9c6d7815aee0eaca6ec80ad13f7d9c1f
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: e1aaa253117c0b12c1328b529baa409e35c9d511
+
+COCOAPODS: 1.11.3
