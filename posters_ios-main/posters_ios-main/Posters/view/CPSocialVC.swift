@@ -359,26 +359,24 @@ class CPSocialVC: UIViewController {
             self.showConfirmDialogForInstagramRemoval()
             return
         }
-        
-        SVProgressHUD.show(withStatus: "Connecting...")
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
-//            self.btn_social2.isSelected = true
-//            SVProgressHUD.dismiss()
-//        }
-        
-        InstagramApi.shared.authorizeApp { (url) in
-            DispatchQueue.main.async {
-                SVProgressHUD.dismiss()
-                if let url = url {
-                    print(">>> instagram - ", url)
-                    self.instagramConnectView.isHidden = false
-                    self.view.bringSubviewToFront(self.instagramConnectView)
-                    self.m_wvInstagram.navigationDelegate = self
-                    let request = URLRequest(url: url)
-                    self.m_wvInstagram.load(request)
+        m_wvInstagram.clean {
+            SVProgressHUD.show(withStatus: "Connecting...")
+            
+            InstagramApi.shared.authorizeApp { (url) in
+                DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
+                    if let url = url {
+                        print(">>> instagram - ", url)
+                        self.instagramConnectView.isHidden = false
+                        self.view.bringSubviewToFront(self.instagramConnectView)
+                        self.m_wvInstagram.navigationDelegate = self
+                        let request = URLRequest(url: url)
+                        self.m_wvInstagram.load(request)
+                    }
                 }
             }
         }
+    
 
     }
     
@@ -464,5 +462,29 @@ extension CPSocialVC: WKNavigationDelegate {
             }
         }
         decisionHandler(WKNavigationActionPolicy.allow)
+    }
+}
+extension WKWebView {
+
+    func clean(completion : @escaping () -> Void) {
+        
+        guard #available(iOS 9.0, *) else {return}
+
+        HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
+        let dispatch_group = DispatchGroup()
+        WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
+            records.forEach { record in
+                dispatch_group.enter()
+                WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {
+                    dispatch_group.leave()
+                })
+                #if DEBUG
+                    print("WKWebsiteDataStore record deleted:", record)
+                #endif
+            }
+            dispatch_group.notify(queue: DispatchQueue.main) {
+                completion() //
+            }
+        }
     }
 }

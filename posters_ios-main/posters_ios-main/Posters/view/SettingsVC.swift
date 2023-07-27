@@ -59,6 +59,8 @@ class SettingsVC: UIViewController {
     @IBAction func gotoSocial(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CPSocialVC") as! CPSocialVC
         vc.isFromSetting = true
+        vc.hidesBottomBarWhenPushed = true
+
         self.navigationController?.pushViewController(vc, animated: true)
 
     }

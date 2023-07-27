@@ -4068,7 +4068,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D7507A58-3C53-4F26-9FFF-2F1DCE2F8D95"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Posters/library/InstagramApi.swift"
@@ -4092,7 +4092,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "157"
                   endingLineNumber = "157"
-                  offsetFromSymbolStart = "2942">
+                  offsetFromSymbolStart = "3480">
                </Location>
                <Location
                   uuid = "D7507A58-3C53-4F26-9FFF-2F1DCE2F8D95 - cb1f79b8af9ee111"
@@ -4107,7 +4107,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "158"
                   endingLineNumber = "158"
-                  offsetFromSymbolStart = "216">
+                  offsetFromSymbolStart = "188">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4173,6 +4173,22 @@
             startingLineNumber = "121"
             endingLineNumber = "121"
             landmarkName = "getTestUserIDAndToken(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C188FF43-2B80-4C09-A87F-E222583076F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Posters/view/ProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "loadDetails()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
