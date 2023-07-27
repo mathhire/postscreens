@@ -69,7 +69,6 @@ class CPAddProfileVC: UIViewController,UINavigationControllerDelegate, UIImagePi
             if success{
                 print("---Success")
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "CPSocialVC") as! CPSocialVC
-                    
                     self.navigationController?.pushViewController(vc, animated: true)
 
 
